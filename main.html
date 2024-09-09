@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>My works</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .about-me {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .about-me p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .about-me a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about-me a:hover {
+            text-decoration: underline;
+        }
+
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #modal img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #modal .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p>My name is Ivan, and I am a third-year student in programming with a focus on AI. I have experience in creating websites using HTML and CSS, as well as skills in scripting with PHP and JavaScript.</p>
+        <p>Each page was created using phpMyAdmin, and each has its own database.</p>
+        <p>I have successfully passed two European programming exams.</p>
+        <p>Sincerely, Ivan.</p>
+    </div>
+    
+    <header>
+        <h1>Work gallery</h1>
+    </header>
+
+    <section class="gallery">
+        <img src="payment.png" alt="payment" onclick="openModal(this.src)">
+        <img src="liga.jpg" alt="liga" onclick="openModal(this.src)">
+        <img src="automat.png" alt="automat" onclick="openModal(this.src)">
+        <img src="faceit.jpg" alt="faceit" onclick="openModal(this.src)">
+        <img src="peoples.jpg" alt="peoples" onclick="openModal(this.src)">
+        <img src="matma.jpg" alt="matma" onclick="openModal(this.src)">
+        <img src="matma01.jpg" alt="matma01" onclick="openModal(this.src)">
+        <img src="lotnisko.jpg" alt="lotnisko" onclick="openModal(this.src)">
+        <img src="portal.jpg" alt="lotnisko" onclick="openModal(this.src)">
+        <img src="pracownicy.jpg" alt="lotnisko" onclick="openModal(this.src)">
+        <img src="salon.jpg" alt="lotnisko" onclick="openModal(this.src)">
+        <img src="salon1.jpg" alt="lotnisko" onclick="openModal(this.src)">
+        <img src="sklep.jpg" alt="lotnisko" onclick="openModal(this.src)">
+    </section>
+    <div id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage">
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact info:<br><p>Telephone number: <a href="tel:+48574512895">+48 574 512 895</a></p>
+           <p>E-mail: <a href="mailto:mitswelardo666@gmail.com">mitswelardo666@gmail.com</a></p</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
