@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>My Works</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-content">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>Hi! I’m Ivan, a third-year programming student with a focus on Artificial Intelligence. Over the years, I’ve gained experience in web development using HTML, CSS, PHP, and JavaScript. I’m passionate about solving challenging problems, whether it’s designing web applications or creating AI-driven solutions.
+
+                    I’m always exploring new technologies to enhance my skills and keep up with the latest trends in programming and AI. In my spare time, I work on personal projects and continuously seek out learning opportunities. If you have an exciting project or idea, feel free to reach out—I’d love to collaborate!</p>
+                <p>Each page was created using phpMyAdmin, and each has its own database.</p>
+                <p>Sincerely, Ivan.</p>
+            </div>
+
+            <aside class="skills">
+                <h2>Skills</h2>
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="bar"><div class="progress" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar"><div class="progress" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>PHP</span>
+                    <div class="bar"><div class="progress" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>MySQL</span>
+                    <div class="bar"><div class="progress" style="width: 40%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>C# (currently learning)</span>
+                    <div class="bar"><div class="progress" style="width: 20%;"></div></div>
+                </div>
+            </aside>
+        </div>
+        <div class="container">
+            <h1>Work Gallery</h1>
+        </div>
+        <section class="gallery">
+            <div class="frame">
+                <img src="payment-thumbnail.jpg" alt="Payment" onclick="openModal('payment.png')">
+            </div>
+            <div class="frame">
+                <img src="liga-thumbnail.jpg" alt="Liga" onclick="openModal('liga.jpg')">
+            </div>
+            <div class="frame">
+                <img src="automat-thumbnail.jpg" alt="Automat" onclick="openModal('automat.jpg')">
+            </div>
+            <div class="frame">
+                <img src="faceit-thumbnail.jpg" alt="Faceit" onclick="openModal('faceit.jpg')">
+            </div>
+            <div class="frame">
+                <img src="peoples-thumbnail.jpg" alt="Peoples" onclick="openModal('peoples.jpg')">
+            </div>
+            <div class="frame">
+                <img src="matma-thumbnail.jpg" alt="Matma" onclick="openModal('matma.jpg')">
+            </div>
+            <div class="frame">
+                <img src="matma01-thumbnail.jpg" alt="Matma01" onclick="openModal('matma01.jpg')">
+            </div>
+            <div class="frame">
+                <img src="lotnisko-thumbnail.jpg" alt="Lotnisko" onclick="openModal('lotnisko.jpg')">
+            </div>
+            <div class="frame">
+                <img src="salon1-thumbnail.jpg" alt="Salon" onclick="openModal('salon1.jpg')">
+            </div>
+            <div class="frame">
+                <img src="pracownicy-thumbnail.jpg" alt="Pracownicy" onclick="openModal('pracownicy.jpg')">
+            </div>
+            <div class="frame">
+                <img src="sklep-thumbnail.jpg" alt="Sklep" onclick="openModal('sklep.jpg')">
+            </div>
+            <div class="frame">
+                <img src="portal-thumbnail.jpg" alt="Portal" onclick="openModal('portal.jpg')">
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-content">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+    <section class="achievements">
+        <h2>Achievements</h2>
+        <div class="frame1">
+            <img src="certificate-thumbnail.jpg" alt="Portal" onclick="openModal('certificate.jpg')">
+            <div class="caption">Certificate from the exam</div>
+        </div>
+    </section>
+    <footer>
+        <div class="contact-info">
+            <p>Contact info:<br><a href="tel:+48574512895">+48 574 512 895</a><br>
+            <a href="mailto:mitswelardo666@gmail.com">mitswelardo666@gmail.com</a></p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/tsk.qy" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100091763490042" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; Ivan Arzhanieiev 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+ 
+    </script>
+</body>
+</html>
