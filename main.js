@@ -12,7 +12,10 @@ const images = [
     'pracownicy.jpg',
     'sklep.jpg',
     'portal.jpg',
-    'certificate.jpg'
+    'ptaki.jpg',
+    'certificate.jpg',
+    'prackticies.jpg'
+    
 ];
 
 function openModal(src) {
@@ -33,3 +36,31 @@ function changeImage(n) {
     currentImageIndex = (currentImageIndex + n + images.length) % images.length;
     document.getElementById('modalImage').src = images[currentImageIndex];
 }
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    const icon = document.querySelector('.theme-toggle i');
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+
+
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+window.onload = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.querySelector('.theme-toggle i').classList.add('fa-sun');
+    }
+};
+
